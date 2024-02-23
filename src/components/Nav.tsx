@@ -19,7 +19,7 @@ export default function Nav() {
         statHidden, setStatHidden,
         drops, setDrops,
         stats, setStats,
-        scrollPosition, setScrollPosition,
+        scrollPosition,
       } = useContext<any>(UseContext);
 
 
