@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Chart, CategoryScale, LinearScale, BarController, BarElement, LineController, LineElement, PointElement, Tooltip } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
-import UseContext from '../UserContext';
+import UseContext from "../UserContext";
 import sourceData from '../sales_data.json';
 
 // Register necessary Chart.js components

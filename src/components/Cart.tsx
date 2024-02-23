@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import UseContext from '../UserContext'
+import UseContext from "../UserContext";
 import { BsXLg } from "react-icons/bs";
 import dance from '../assets/dance.gif';
 

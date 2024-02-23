@@ -52,7 +52,6 @@ function App() {
     const handleScroll = () => {
       const position = window.scrollY;
       setScrollPosition(position);
-      console.log(position)
     };
     
     useEffect(() => {
