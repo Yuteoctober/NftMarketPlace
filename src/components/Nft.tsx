@@ -1,3 +1,4 @@
+import React from 'react';
 import { useContext } from "react";
 import UseContext from '../UserContext'
 import { motion } from "framer-motion"
@@ -17,17 +18,20 @@ export default function Nft() {
 
 
     // function add buy to cart 
-    const addToCart = (nft: object) => {
+    const addToCart = (nft: any) => {
       
-      if (cartItem && cartItem.some(item => item.nft.name === nft.nft.name)){
-        alert(`Item is already in your cart.`)
+      if (
+        cartItem &&
+        cartItem.some((item: any) => item.nft.name === nft.nft.name)
+      ) {
+        alert(`Item is already in your cart.`);
         return;
       }
   
       const updatedCart = [...cartItem, nft];
       setCartItem(updatedCart);
       alert(`Item has been added in your cart.`)
-      console.log(updatedCart);
+  
   };
 
       
@@ -67,8 +71,8 @@ export default function Nft() {
         :
         (
           <motion.div className="nft_img">
-          {nftData.length > 0 && (filterByInput? filteredNftData:nftData).map((nft, index) => (
-            <>
+          { nftData.length > 0 && (filterByInput ? filteredNftData : nftData).map((nft: any, index: number) => (
+            <React.Fragment key={nft.id}>
               <motion.div className='img_container' key={nft.id} 
                 onHoverStart={() => {toggleEthState(index); toggleBuy(index)}}
                 onClick={() => {toggleEthState(index); toggleBuy(index)}}
@@ -100,7 +104,7 @@ export default function Nft() {
                   </motion.h3>
                 </div>
               </motion.div>
-            </>
+            </React.Fragment>
           ))}
         </motion.div>
         )

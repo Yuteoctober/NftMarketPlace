@@ -1,4 +1,3 @@
-import React from 'react'
 import UseContext from '../UserContext'
 import { useContext } from "react";
 import profilePic from '../assets/5NrqFUSJ_400x400.jpg';

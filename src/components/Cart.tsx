@@ -3,10 +3,9 @@ import UseContext from "../UserContext";
 import { BsXLg } from "react-icons/bs";
 import dance from '../assets/dance.gif';
 
-// Define the type for an individual cart item
 interface CartItem {
   nft: {
-    identifier: number; // Assuming this is the unique identifier for the item
+    identifier: number; 
     image_url: string;
     name: string;
     rarity: {
@@ -24,7 +23,7 @@ function Cart() {
 
   function deleteItem(id: number, index: number) {
     if (cartItem[index].nft.identifier === id) {
-      const updatedCart = cartItem.filter((item, idx) => idx !== index);
+      const updatedCart = cartItem.filter((_, idx) => idx !== index);
       setCartItem(updatedCart);
     }
   }

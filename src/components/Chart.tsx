@@ -4,14 +4,15 @@ import { Bar } from 'react-chartjs-2';
 import UseContext from "../UserContext";
 import sourceData from '../sales_data.json';
 
-// Register necessary Chart.js components
+
 Chart.register(CategoryScale, LinearScale, BarController, BarElement, LineController, LineElement, PointElement, Tooltip);
+
 
 export default function Charts() {
     const { activity } = useContext<any>(UseContext);
 
     // Define chart data
-    const chartData: any = {
+    const chartData = {
         labels: sourceData.map(data => data.day),
         datasets: [
             {
